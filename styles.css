@@ -1,0 +1,271 @@
+header {
+    max-width: 60rem;
+    margin: auto;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-image: linear-gradient(to right, 		#204020, 	#242d26, 	#204020);
+    color: rgb(255,255,255);
+    margin: 0;
+    line-height: 1.5;
+    
+
+    font-optical-sizing: none; /*(auto; nýtt - virkar ekki í open sans) https://developer.mozilla.org/en-US/docs/Web/CSS/font-optical-sizing */
+    font-variation-settings: "wdth" 100; /* (nýtt - virkar ekki í open sans) https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.centermiddle {
+    text-align: center;
+}
+
+.white {
+    color: white;
+}
+
+.padtop {
+    padding-top: .6rem;
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-size: .9;
+    font-style: italic;
+}
+.bg-grunnur {
+    background: linear-gradient(#204020, #242d26, #204020);
+}
+.bg-gradient {
+    background-image: linear-gradient(rgb(255,255,255, .4), rgb(255,255,255, 0));
+}
+header, main, footer {
+    padding: 1em;
+}
+header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    text-transform: none;
+}
+.topnav {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-image: linear-gradient(	#542252, 	#542252);
+}
+.topnav a{
+    padding: .5em 1em;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.topnav a,
+.footernav a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+}
+footer {
+    line-height: 1.8;
+}
+main {
+    color: rgb(28, 57, 35);
+}
+main a {
+    color: rgb(28, 57, 35);
+}
+
+/* Grid */
+
+.col-3, .col-32, .col-23 {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+.copy {
+    text-align: center;
+}
+
+.border {
+    background: linear-gradient(	#542252,#542252);
+    padding: .01rem;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* viðmið - breakpoints */
+
+@media screen and (min-width:37.5rem){ /* 600px */
+    .topnav {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .topnav a {
+        border: 0;
+        border-right: 1px solid rgb(243, 215, 175);
+    }
+    .topnav a:last-child {
+        border:0;
+    }
+    .footernav a {
+        text-align: left;
+    }
+}
+@media screen and (min-width:48rem){  /* 760px */
+    body {
+        line-height: 1.5;
+    }
+    .col-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .col-23 {
+        grid-template-columns: 1fr 3fr;
+        gap: 1em;
+    }
+    .col-32 {
+        grid-template-columns: 3fr 1fr;
+        gap: 1em;
+    }
+}
+@media screen and (min-width: 60rem){  /* 960px */
+
+    header, main, footer {
+        max-width: 60em;
+        margin: 0 auto;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .col-3 {
+        gap: 3rem;
+    }
+    .col-32 {
+        grid-template-columns: 3fr 2fr;
+        gap: 3em;
+    }
+    .col-23 {
+        grid-template-columns: 2fr 3fr;
+        gap: 3em;
+    }
+}
+@media screen and (min-width: 80rem){ 
+
+    header, main, footer {
+        max-width: 80em;
+    }
+    header h1 {
+        font-size: 3.5rem;
+    }
+    footer img {
+        padding: 1rem 1rem 0 1rem;
+    }
+    .copy {
+        padding-bottom: 3rem;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .video {
+        max-width: 24.6rem;
+    }
+}
+@media screen and (min-width: 60rem) {
+    .video {
+        max-width: 33rem;
+    }
+}
+@media screen and (min-width: 80rem) {
+    .video {
+        max-width: 45rem;
+    }
+}
+@media screen and (min-width:100rem) {
+    .video {
+        max-width: 56rem;
+    }
+}
+
+@media screen and (min-width: 37.5rem) {
+    .kort {
+        height: 19.7rem;
+    }
+}
+@media screen and (min-width: 48rem) {
+    .kort {
+        height: 19.7rem;
+    }
+}
+@media screen and (min-width: 60rem) {
+    .kort {
+        height: 19.7rem;
+    }
+}
+@media screen and (min-width: 80rem) {
+    .kort {
+        height: 26rem;
+    }
+}
+@media screen and (min-width: 100rem) {
+    .kort {
+        height: 19.7rem;
+    }
+}
+
+.gluggi {
+    width:100%;
+    height:10.5rem; /*168px;*/ 
+    margin: auto;
+  }
+
+@media screen and (min-width: 25rem) {
+    .gluggi {
+      height:13rem; /*207px;*/ 
+    }
+ }
+
+@media screen and (min-width: 30rem) {
+    .gluggi { 
+     height:15.75rem; /*252px;*/ 
+   }
+ }
+
+@media screen and (min-width: 37.5rem) {
+    .gluggi {
+      height:19.7rem; /*315px;*/
+    }
+ }
+
+ @media screen and (min-width:48rem){
+  .gluggi {
+    height:24.6rem; /*414px;*/ 
+  }
+}
+@media screen and (min-width:60rem){
+  .gluggi {
+    height:33rem; /*534px;*/ 
+  }
+}
+@media screen and (min-width: 80rem) {
+    .gluggi {  
+      height:44rem; /*~702px;*/ 
+    }
+  } 
